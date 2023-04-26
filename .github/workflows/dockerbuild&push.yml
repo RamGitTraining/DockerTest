@@ -12,7 +12,7 @@ jobs:
     environment: Dev
     steps:
       - name: gitclone 
-        run: git clone https://github.com/Shubhambawa98/testenv.git
+        run: git clone https://github.com/RamGitTraining/DockerTest.git
       - name: docker installation 
         run: curl -fsSL https://get.docker.com | sh 
       - name: docker login 
@@ -22,7 +22,7 @@ jobs:
       - name: test
         run: echo "hello"
       - name: docker tag & push  
-        run: docker tag fast_api:latest shubhambawa98/testlkm:latest && docker push shubhambawa98/testlkm:latest
+        run: docker tag fast_api:latest shubhambawa98/testram:latest && docker push shubhambawa98/testram:latest
         
       - name: login Target Server
         uses: appleboy/ssh-action@v0.1.10
